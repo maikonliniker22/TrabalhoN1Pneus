@@ -1,7 +1,7 @@
-//Maikon Liniker Ara˙jo de Souza
+//Maikon Liniker Ara√∫jo de Souza
 //Algoritimos 2
-//Trabalho N1
-//2025/2
+//Trabalho N2
+//2026/2
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -61,7 +61,7 @@ int validarPlaca(char placa[])
     return 1;
 }
 
-//Verificar repetiÁ„o de numero de fogo do pneu
+//Verificar repeti√ß√£o de numero de fogo do pneu
 int existeNaMatriz(int matriz[3][12], int valor)
 {
     for (int i = 0; i < 3; i++)
@@ -90,7 +90,7 @@ void tipoeixo()
     }
 }
 
-// Legenda dos pneus no formato de caminh„o
+// Legenda dos pneus no formato de caminh√£o
 void legenda(int eixo) {
     printf("\nLEGENDA DOS PNEUS  \n");
 
@@ -155,7 +155,7 @@ void pneus(int eixo)
             qtdDianteiros=0; qtdTraseiros=12; qtdEstepes=2; printf("\nEixo CARRETA 3 EIXOS selecionado.\n");
         }
 
-    // Mostra a legenda com o desenho do caminh„o
+    // Mostra a legenda com o desenho do caminh√£o
     legenda(eixo);
 
     int valor;
@@ -165,9 +165,9 @@ void pneus(int eixo)
     {
         do
         {
-            printf("Digite o %d∫ pneu dianteiro: ", j+1);
+            printf("Digite o %d¬∫ pneu dianteiro: ", j+1);
             scanf("%d", &valor);
-            if(existeNaMatriz(matriz, valor)) printf("Pneu j· cadastrado, digite outro.\n");
+            if(existeNaMatriz(matriz, valor)) printf("Pneu j√° cadastrado, digite outro.\n");
             else break;
         } while(1);
         matriz[0][j] = valor;
@@ -178,9 +178,9 @@ void pneus(int eixo)
     {
         do
         {
-            printf("Digite o %d∫ pneu traseiro: ", j+1);
+            printf("Digite o %d¬∫ pneu traseiro: ", j+1);
             scanf("%d", &valor);
-            if(existeNaMatriz(matriz, valor)) printf("Pneu j· cadastrado, digite outro.\n");
+            if(existeNaMatriz(matriz, valor)) printf("Pneu j√° cadastrado, digite outro.\n");
             else break;
         } while(1);
         matriz[1][j] = valor;
@@ -191,9 +191,9 @@ void pneus(int eixo)
     {
         do
         {
-            printf("Digite o %d∫ estepe: ", j+1);
+            printf("Digite o %d¬∫ estepe: ", j+1);
             scanf("%d", &valor);
-            if(existeNaMatriz(matriz, valor)) printf("Pneu j· cadastrado, digite outro.\n");
+            if(existeNaMatriz(matriz, valor)) printf("Pneu j√° cadastrado, digite outro.\n");
             else break;
         } while(1);
         matriz[2][j] = valor;
@@ -230,27 +230,27 @@ void pneus(int eixo)
             case 2:
         {
                 int l1,c1,l2,c2;
-                printf("\nConsidere as posiÁıes iniciando do ZERO\n");
+                printf("\nConsidere as posi√ß√µes iniciando do ZERO\n");
                 printf("\nDigite a linha e coluna do primeiro pneu:\n0 = dianteiros\n1 = traseiros\n2 = estepes\n");
                 scanf("%d %d",&l1,&c1);
                 printf("Digite a linha e coluna do segundo pneu:   \n0 = dianteiros\n1 = traseiros\n2 = estepes\n");
                 scanf("%d %d",&l2,&c2);
 
-                // ValidaÁ„o
+                // Valida√ß√£o
                 if(l1<0 || l1>2 || l2<0 || l2>2)
                 {
-                    printf("Linha inv·lida!\n");
+                    printf("Linha inv√°lida!\n");
                     break;
                 }
                 if((l1==0 && c1>=qtdDianteiros) || (l1==1 && c1>=qtdTraseiros) || (l1==2 && c1>=qtdEstepes) ||
                    (l2==0 && c2>=qtdDianteiros) || (l2==1 && c2>=qtdTraseiros) || (l2==2 && c2>=qtdEstepes))
                 {
-                    printf("Coluna inv·lida!\n");
+                    printf("Coluna inv√°lida!\n");
                     break;
                 }
                 if(l1==l2 && c1==c2)
                 {
-                    printf("N„o pode escolher o mesmo pneu!\n");
+                    printf("N√£o pode escolher o mesmo pneu!\n");
                     break;
                 }
 
@@ -264,7 +264,7 @@ void pneus(int eixo)
 
             case 3: printf("Saindo do programa...\n");
             break;
-            default: printf("OpÁ„o inv·lida!\n");
+            default: printf("Op√ß√£o inv√°lida!\n");
         }
 
     }
